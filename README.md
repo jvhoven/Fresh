@@ -1,5 +1,6 @@
 # Fresh
-Fractional Escalated Hackwork
+
+![FRESH](https://cloud.githubusercontent.com/assets/5366355/7358355/14e0b4ca-ed35-11e4-9a8a-43c8f60673c6.jpg)
 
 A project to explore the power of the MEAN stack.
 
