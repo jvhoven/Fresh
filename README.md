@@ -4,21 +4,21 @@ Fractional Escalated Hackwork
 A project to explore the power of the MEAN stack.
 
 - Things to note
-	* Reactor instead of angular
-
-
+	* I might switch to reactorjs instead of angularjs
 
 ----------------------------------------------------
 
 Install NodeJS	
 
-https://www.mongodb.org/	
+https://nodejs.org/
 	
 ----------------------------------------------------	
 	
 Install MongoDB
 
 https://www.mongodb.org/
+
+MongoDB will be our database.
 
 -----------------------------------------------------
 
@@ -28,11 +28,15 @@ Install bower
 npm install -g bower
 ```
 
+Bower holds track of external dependencies like angularjs.
+
 Install nodemon
 
 ```
 npm install -g nodemon
 ```
+
+This allows for easy development, automatically restarts server on code change.
 
 -----------------------------------------------------
 
