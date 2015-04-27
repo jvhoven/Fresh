@@ -1,0 +1,20 @@
+<body ng-controller="entryController">
+	<header>
+		<form>
+			<div class="page-title">Fractional Escalated Hackwork</div>
+			<div class="page-subtitle">An application for the people that are weak minded</div>
+		</form>
+	</header>
+	<section id="entries">
+		<div class="heading center">
+			Entry
+		</div>
+		<div class="grid center">
+			<form action="/api/entry" method="post">
+				<input type='text' name='title' placeholder='Fill in the title' />
+				<textarea name='description'></textarea>
+				<input type='submit' value='Save' />
+			</form>
+		</div>
+	</section>
+</body>
