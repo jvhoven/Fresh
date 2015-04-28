@@ -1,14 +1,21 @@
 * { margin: 0; padding: 0; box-sizing: border-box;
     -moz-box-sizing: border-box;}
 
+html, body {
+    height: 100%;
+}
+
 body{ 
+	float: left;
+	width: 100%;
+	height: 100%;
 	background: #eee; 
-	height: 1500px;
 	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .center { text-align: center; }
-.wrapper{ width: 1405px; }
+.wrapper{ width: 100%; padding: 0 3%;}
+.content-wrapper{ width: 1044px; margin: 0 auto; height: auto;}
 
 nav{
 	width: 100%;
@@ -41,6 +48,8 @@ nav{
 
 .new-entry {
 	display: block;
+	text-decoration: none;
+	color: #FFF;
 	margin: 0 auto;
 	width: 140px;
 	padding: 10px;
@@ -62,7 +71,6 @@ header{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center top;
-	width: 100%;
 	position: relative;
 	color: #ffffff;
 	padding-bottom: 40px;
@@ -88,9 +96,9 @@ header{
 	}
 
 .grid{
-	float: left;
+	padding: 0 0.5%;
 	width: 100%;
-	margin:0 auto;
+	padding-bottom: 120px;
 }
 
 section{
@@ -98,6 +106,7 @@ section{
 }
 
 	section .heading {
+		line-height: 2;
 		color: rgb(51, 51, 51);
 		padding: 40px 20px;
 		font-size: 36px;
@@ -106,7 +115,7 @@ section{
 
 	#entries .entry{
 		float: left;
-		margin: 0px 5px 5px 5px;
+		margin: 0px 0px 5px 5px;
 		width: 269px;
 		height: 270px;
 		background: #FFF;
@@ -161,6 +170,9 @@ section{
 	}
 
 	input[type='submit'] {
+		-webkit-appearance: none !important;
+		-moz-appearance: none !important;
+		appearance: none !important;
 		display: block;
 		background: #9EDD8F;
 		color: #FFF;
@@ -168,6 +180,11 @@ section{
 		width: 200px;
 		cursor: pointer;
 	}
+
+section#entry.existing {
+	background-color: #FFF;
+	height: 100%;
+}
 
 #entry .date{
 	line-height: 0.5;
@@ -207,8 +224,8 @@ section{
 #entry p{
 	color: #747474;
 	text-align: left;
-	width: 65%;
-	margin: 40px auto;
+	width: 78%;
+  	margin: 20px auto 0 auto;
 }
 
 	#entry p:first-letter{
@@ -217,30 +234,3 @@ section{
 		text-transform: uppercase;
 	}
 
-
-
-@media screen and (min-width: 60em) {
-	header{
-		height: 740px;
-	}
-
-}
-
-@media screen and (min-width: 50em) {
-	header {
-		height: 640px;
-	}
-
-}
-
-@media screen and (min-width: 40em) {
-	header {
-		height: 540px;
-	}
-}
-
-@media screen and (min-width: 30em) {
-	header {
-		height: 430px;
-	}
-}

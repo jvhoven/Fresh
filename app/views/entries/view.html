@@ -1,0 +1,12 @@
+<section id="entry" class="existing" ng-controller="Detail">
+	<div class="content-wrapper">
+		<div class="heading center">
+			{{ entry.title }}
+		</div>
+		<div class="grid center">
+			<div class="date"><span ng-bind="entry.created | date:'d MMMM yyyy'"></span></div>
+			<br />
+			<p>{{ entry.description }}</p>
+		</div>
+	</div>
+</section>

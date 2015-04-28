@@ -12,12 +12,12 @@ router.get('/', function(req, res) {
 });
 
 router.get('/entry/:id', function(req, res) {
-	var html = read('app/views/entry.html');
+	var html = read('app/views/entries/view.html');
 	res.render('_shared/_layout.ejs', { body: html });
 });
 
 router.get('/entry', function(req, res) {
-	var html = read('app/views/entry.html');
+	var html = read('app/views/entries/create.html');
 	res.render('_shared/_layout.ejs', { body: html });
 })
 

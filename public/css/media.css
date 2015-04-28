@@ -1,0 +1,61 @@
+@media screen and (min-width: 60em) {
+	header{
+		height: 740px;
+	}
+
+}
+@media screen and (min-width: 50em) {
+	header {
+		height: 640px;
+	}
+}
+
+@media screen and (min-width: 40em) {
+	header {
+		height: 540px;
+	}
+
+	.content-wrapper{
+		width: 845px;;
+	}
+}
+
+@media screen and (min-width: 30em) {
+	header {
+		height: 430px;
+	}
+}
+
+@media (min-width: 568px) {
+  .content-wrapper {
+    width: 550px;
+  }
+}
+@media (min-width: 992px) {
+  .content-wrapper {
+    width: 840px;
+  }
+
+
+  /* iPad */
+   .wrapper{
+  	  width: 615px;
+  	  margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .content-wrapper {
+    width: 1052px;
+  }
+
+  .wrapper{
+  	width: 100%;
+  	margin: 0;
+  }
+}
+
+@media (min-width: 1700px) {
+	.content-wrapper {
+		width: 1420px;
+	}
+}

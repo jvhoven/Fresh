@@ -4,18 +4,19 @@
 		<base href="/">
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0, width=device-width">
 		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="/css/media.css" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css">
 		<link href="/bower/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	</head>
 	<body>
 		<nav>
 			<i class="fa fa-bars"></i>
-
 		</nav>
 		<header>
 			<form>
 				<div class="page-title">Fractional Escalated Hackwork</div>
 				<div class="page-subtitle">A diary application to register entries in</div>
-				<a ng-click="go('/entry')" class="new-entry">New entry</a>
+				<a href="/entry" class="new-entry">New entry</a>
 			</form>
 		</header>
 		<%- body %>
@@ -23,6 +24,5 @@
 		<script src="/bower/angular-resource/angular-resource.js" type="application/javascript"></script>
 		<script src="/bower/angular-route/angular-route.js" type="application/javascript"></script>
 		<script src="/js/angular/fresh.js" type="application/javascript"></script>
-	</head>
 	</body>
 </html>

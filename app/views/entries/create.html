@@ -1,0 +1,12 @@
+<section ng-controller="Detail" id="entry" ng-hide="entry.title">
+	<div class="heading center">
+		Entry
+	</div>
+	<div class="grid center">
+		<form action="/api/entry" method="post">
+			<input type='text' name='title' placeholder='Fill in the title' />
+			<textarea ng-model="content" name='description'></textarea>
+			<input type='submit' value='Save' />
+		</form>
+	</div>
+</section>
