@@ -16,7 +16,7 @@ router.get('/entry/:id', function(req, res) {
 	res.render('_shared/_layout.ejs', { body: html });
 });
 
-router.get('/entry', function(req, res) {
+router.get('/entry/', function(req, res) {
 	var html = read('app/views/entries/create.html');
 	res.render('_shared/_layout.ejs', { body: html });
 })
