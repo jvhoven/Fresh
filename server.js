@@ -1,24 +1,12 @@
-
-// Fancy express train
-var express = require("express");
-
-// Path for the static files
-var path = require("path");
-
-// Mongoose for MongoDB communication
-var mongoose = require("mongoose");
-
-// BodyParser for incoming requests
-var bodyParser = require("body-parser");
+var express = require("express"); // Fancy nodejs stuff
+var path = require("path"); // Path for static files
+var mongoose = require("mongoose"); // Mongoose for easy MongoDB communication
+var bodyParser = require("body-parser"); // Bodyparser for incoming requests
 var methodOverride = require("method-override");
 var errorHandler = require("errorhandler");
-var logger = require("morgan");
-
-// Template renderer?
-var ejs = require("ejs");
-
-// Filesystem
-var fs = require("fs");
+var logger = require("morgan"); // Morgan for logging all incoming requests
+var ejs = require("ejs"); // EJS as renderen, I don't like the syntax of jade and it looks ugly
+var fs = require("fs"); // Filesystem for fetching the shared layout
 
 // Our application
 var app = module.exports = express();
@@ -55,7 +43,11 @@ var app = module.exports = express();
 
 // Database connection -----------------------------------
 
-	mongoose.connect('mongodb://localhost/');
+	mongoose.connect('mongodb://localhost/', function(err) {
+		if(err)
+			console.log("Could not connect to database, are your credentials correct in server.js? \n" + err);
+
+	});
 
 // Server stuff
 var server = app.listen(3000, function () {

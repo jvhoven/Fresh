@@ -1,21 +1,17 @@
-<body ng-controller="entryController">
-	<header>
-		<form>
-			<div class="page-title">Fractional Escalated Hackwork</div>
-			<div class="page-subtitle">An application for the people that are weak minded</div>
-		</form>
-	</header>
+<body ng-controller="Home">
 	<section id="entries">
 		<div class="heading center">
 			Entries
 		</div>
-		<div class="grid">
-			<div ng-repeat="entry in entries | orderBy:'-created'">
-				<div class="entry" ng-click="go('/entry/', entry._id)">
-					<div class="date" ng-bind="entry.created | date:'d'"></div>
-					<div class="month" ng-bind="entry.created | date:'MMMM'"></div>
-					<span class="line"></span>
-					<div class="title"> {{ entry.title }}</div>
+		<div class="wrapper">
+			<div class="grid">
+				<div ng-repeat="entry in entries | orderBy:'-created'">
+					<div class="entry" ng-click="go('/entry/', entry._id)">
+						<div class="date" ng-bind="entry.created | date:'d'"></div>
+						<div class="month" ng-bind="entry.created | date:'MMMM'"></div>
+						<span class="line"></span>
+						<div class="title"> {{ entry.title }}</div>
+					</div>
 				</div>
 			</div>
 		</div>

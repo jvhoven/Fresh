@@ -9,6 +9,6 @@ var entries = require('../controllers/entry.controller.js');
 // Routes -------------------------
 router.get('/entries', entries.list);
 router.post('/entry', entries.create);
-router.get('/entry/:id', entries.read);
+router.get('/entries/:id', entries.read);
 
 module.exports = router;
