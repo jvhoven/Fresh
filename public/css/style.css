@@ -13,6 +13,12 @@ body{
 	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+#mceu_14 {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
 .center { text-align: center; }
 .wrapper{ width: 100%; padding: 0 3%;}
 .content-wrapper{ width: 1044px; margin: 0 auto; height: auto;}

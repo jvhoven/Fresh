@@ -24,10 +24,10 @@ app.controller('Detail', ['$scope', 'Entry',
 }]);
 
 app.controller('Home', function($scope, Entry){
-	
+
   // Retrieve all entries
   $scope.entries = Entry.index();
-  
+
   // Redirects to a page
   $scope.go = function(path, index) {
     if(typeof(index) == 'undefined') {
@@ -44,7 +44,7 @@ app.factory("Entry", function($http, $resource) {
     {
       'create':  { method: 'POST' },
       'index':   { method: 'GET', isArray: true },
-      'show':    { method: 'GET', isArray: false },
+      'show':    { method: 'GET', isArray: true },
       'update':  { method: 'PUT' },
       'destroy': { method: 'DELETE' }
     });
