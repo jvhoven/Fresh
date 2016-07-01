@@ -7,12 +7,14 @@ var errorHandler = require("errorhandler");
 var logger = require("morgan"); // Morgan for logging all incoming requests
 var ejs = require("ejs"); // EJS as renderen, I don't like the syntax of jade and it looks ugly
 var fs = require("fs"); // Filesystem for fetching the shared layout
+var username = process.env.user;
+var password = process.env.password;
 
 // Our application
 var app = module.exports = express();
 
 // Routes ------------------------------------------------
-	
+
 	// Home
 	var home = require("./app/routes/default.js");
 
@@ -29,7 +31,7 @@ var app = module.exports = express();
 	app.use(logger('dev'));
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({ extended: false }));
-	app.use(errorHandler({ dumpExceptions: true, showStack: true })); 
+	app.use(errorHandler({ dumpExceptions: true, showStack: true }));
 
 	// Set the view directory
 	app.set('views', __dirname + '/app/views');
@@ -43,7 +45,7 @@ var app = module.exports = express();
 
 // Database connection -----------------------------------
 
-	mongoose.connect('mongodb://localhost/', function(err) {
+	mongoose.connect('mongodb://' + username + ':' + password + '@ds055885.mlab.com:55885/fractional-escalated-hackwork', function(err) {
 		if(err)
 			console.log("Could not connect to database, are your credentials correct in server.js? \n" + err);
 
