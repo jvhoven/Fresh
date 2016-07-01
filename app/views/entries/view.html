@@ -6,7 +6,7 @@
 		<div class="grid center">
 			<div class="date"><span ng-bind="entry.created | date:'d MMMM yyyy'"></span></div>
 			<br />
-			<p>{{ entry.description }}</p>
+			<p ng-bind-html="entry.description | sanitize"></p>
 		</div>
 	</div>
 </section>

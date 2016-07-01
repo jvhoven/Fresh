@@ -7,7 +7,7 @@ app.config(function($routeProvider) {
     });
 });
 
-app.controller('Detail', ['$scope', 'Entry',
+app.controller('Detail', ['$scope', 'Entry', '$sce',
   function($scope, Entry, AppService) {
 
     // Get id from url
@@ -21,6 +21,12 @@ app.controller('Detail', ['$scope', 'Entry',
     $scope.go = function(path, index) {
       AppService.go(path, index);
     };
+}]);
+
+app.filter("sanitize", ['$sce', function($sce) {
+  return function(htmlCode){
+    return $sce.trustAsHtml(htmlCode);
+  }
 }]);
 
 app.controller('Home', function($scope, Entry){
@@ -44,7 +50,7 @@ app.factory("Entry", function($http, $resource) {
     {
       'create':  { method: 'POST' },
       'index':   { method: 'GET', isArray: true },
-      'show':    { method: 'GET', isArray: true },
+      'show':    { method: 'GET', isArray: false },
       'update':  { method: 'PUT' },
       'destroy': { method: 'DELETE' }
     });
