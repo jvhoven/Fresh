@@ -7,8 +7,6 @@ var errorHandler = require("errorhandler");
 var logger = require("morgan"); // Morgan for logging all incoming requests
 var ejs = require("ejs"); // EJS as renderen, I don't like the syntax of jade and it looks ugly
 var fs = require("fs"); // Filesystem for fetching the shared layout
-var username = process.env.USER;
-var password = process.env.PASSWORD;
 var port = process.env.PORT || 5000;
 
 // Our application
@@ -46,7 +44,7 @@ var app = module.exports = express();
 
 // Database connection -----------------------------------
 
-	mongoose.connect('mongodb://' + username + ':' + password + '@ds055885.mlab.com:55885/fractional-escalated-hackwork', function(err) {
+	mongoose.connect('mongodb://' + process.env.USER + ':' + process.env.PASS + '@ds055885.mlab.com:55885/fractional-escalated-hackwork', function(err) {
 		if(err)
 			console.log("Could not connect to database, are your credentials correct in server.js? \n" + err);
 

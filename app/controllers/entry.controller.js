@@ -23,20 +23,20 @@ exports.read = function(req, res) {
 	Entry.findOne({ _id: req.params.id }, function(err, obj) {
 		if(err)
 			console.log(err);
-		
+
 		res.json(obj);
 	});
 }
 
 exports.create = function(req, res) {
 
-	console.log(req.body);
-
 	var entry = new Entry(req.body);
-	entry.save(function(err){
-		if(err)
-			console.log(err);
+	if(entry.title && entry.description) {
+		entry.save(function(err){
+			if(err)
+				console.log(err);
 
-		res.redirect('/');
-	});
+			res.redirect('/');
+		});
+	}
 }
