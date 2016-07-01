@@ -52,7 +52,7 @@ var app = module.exports = express();
 	});
 
 // Server stuff
-var server = app.listen(3000, function () {
+var server = app.listen(process.env.port || 5000, function () {
 
   this.host = server.address().address;
   this.port = server.address().port;
