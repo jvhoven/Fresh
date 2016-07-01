@@ -7,9 +7,9 @@ var errorHandler = require("errorhandler");
 var logger = require("morgan"); // Morgan for logging all incoming requests
 var ejs = require("ejs"); // EJS as renderen, I don't like the syntax of jade and it looks ugly
 var fs = require("fs"); // Filesystem for fetching the shared layout
-var username = process.env.user;
-var password = process.env.password;
-var port = process.env.port || 5000;
+var username = process.env.USER;
+var password = process.env.PASSWORD;
+var port = process.env.PORT || 5000;
 
 // Our application
 var app = module.exports = express();
@@ -53,6 +53,7 @@ var app = module.exports = express();
 	});
 
 // Server stuff
+console.log(port)
 var server = app.listen(port, function () {
 
   this.host = server.address().address;
