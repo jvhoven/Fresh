@@ -9,6 +9,7 @@ var ejs = require("ejs"); // EJS as renderen, I don't like the syntax of jade an
 var fs = require("fs"); // Filesystem for fetching the shared layout
 var username = process.env.user;
 var password = process.env.password;
+var port = process.env.port || 5000;
 
 // Our application
 var app = module.exports = express();
@@ -52,7 +53,7 @@ var app = module.exports = express();
 	});
 
 // Server stuff
-var server = app.listen(process.env.port || 5000, function () {
+var server = app.listen(port, function () {
 
   this.host = server.address().address;
   this.port = server.address().port;
