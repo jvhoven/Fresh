@@ -247,9 +247,3 @@ section#entry.existing {
 	width: 78%;
   	margin: 20px auto 0 auto;
 }
-
-	#entry p:first-letter{
-		font-size: 200%;
-		color: #59B5E1;
-		text-transform: uppercase;
-	}
